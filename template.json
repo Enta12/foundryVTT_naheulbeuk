@@ -1,0 +1,232 @@
+{
+    "Actor": {
+        "types": [
+            "heros",
+            "npc",
+            "monster",
+            "boss"
+        ],
+        "templates": {
+            "herosStats": {
+                "destinyPoint": 0,
+                "level": 0,
+                "xp": 0,
+                "xpMax": 0
+            },
+            "commonStats": {
+                "abilities": {
+                    "HP": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "HPMAX": {
+                        "base": 25,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "MP": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "MPMAX": {
+                        "base": 25,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "AT": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "PRD": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "COU": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "INT": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "CHA": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "ADR": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "FO": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "PR": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "PRMag": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "MagPHY": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "MagPSY": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    },
+                    "ReMag": {
+                        "base": 0,
+                        "bonus": 0,
+                        "mod": 0,
+                        "total": 0
+                    }
+                }
+            },
+            "namedCharacter": {
+                "name": "",
+                "race": "",
+                "job": "",
+                "sex": "",
+                "year": "",
+                "size": "",
+                "weight": ""
+            },
+            "sensitive": {
+                "language": "",
+                "vision": "",
+                "nyctalopia": "",
+                "hearing": "",
+                "smell": ""
+            },
+            "wealth ": {
+                "gold": 0,
+                "berylium": 0,
+                "thritil": 0
+            }
+
+        },
+        "heros": {
+            "templates": [
+                "commonStats",
+                "namedCharacter",
+                "sensitive",
+                "herosStats",
+                "wealth"
+            ]
+        },
+        "npc": {
+            "templates": [
+                "commonStats",
+                "namedCharacter"
+            ]
+        },
+        "monster": {
+            "templates": [
+                "commonStats",
+                "namedCharacter"
+            ]
+        },
+        "boss": {
+            "templates": [
+                "commonStats",
+                "namedCharacter"
+            ]
+        }
+
+    },
+    "Item": {
+        "types": [
+            "weapon",
+            "armor",
+            "spell"
+        ],
+        "templates": {
+            "itemDescription": {
+                "description": "Description..."
+            },
+            "abilities": {
+                "COU": 0,
+                "INT": 0,
+                "CHA": 0,
+                "ADR": 0,
+                "FO": 0
+            }
+
+        },
+        "weapon": {
+            "templates": [
+                "itemDescription",
+                "abilities"
+            ],
+            "attackWith": "Sword",
+            "modAT": 0,
+            "modPRD": 0,
+            "damage": "2d6+3",
+            "RUP": "1-3",
+            "crit": 1,
+            "fumble": 20
+
+        },
+
+        "armor": {
+            "templates": [
+                "itemDescription",
+                "abilities"
+            ],
+            "protectionItem": "",
+            "PR": 0,
+            "PRMag": 0
+
+
+        },
+        "spell": {
+            "templates": [
+                "itemDescription"
+            ],
+            "damage": "",
+            "spellLevel": 0,
+            "school": "",
+            "test": "",
+            "castSentence": "",
+            "castTime": 0,
+            "castAOE": 0,
+            "cost": 0,
+            "range": 0,
+            "effect": "",
+            "note": ""
+
+
+        }
+    }
+}

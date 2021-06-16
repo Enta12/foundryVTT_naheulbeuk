@@ -1,0 +1,62 @@
+<form id="spellForm" class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.img}}" height="64" width="64" />
+
+    </header>
+
+    <select id="spellSchool" name="data.school">
+        {{#select data.school}}
+        {{#each config.school as |name type|}}
+        <option value="{{type}}">{{localize name}}</option>
+        {{/each}}
+        {{/select}}
+    </select>
+    <div>
+        <input id="spellName" name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" />
+        <input id="spellLevel" name="data.spellLevel" type="text" value="{{data.spellLevel}}" data-dtype="Number" />
+    </div>
+    <div id="spellDice">
+        <input id='diceTest' type="image" src="icons/svg/d20-black.svg" /><span id='diceTestText'>Epreuve</span>
+        <input id="diceDamage" type="image" src="icons/svg/d20-black.svg" /><span id='diceDamageText'>Dégats</span>
+
+    </div>
+    <div id="spellRange">
+        <input name="data.range" type="text" value="{{data.range}}" data-dtype="Number" /> <span>M</span>
+    </div>
+    <div id="spellCost">
+
+        <input name="data.cost" type="text" value="{{data.cost}}" data-dtype="Number" /> <span>PA</span>
+
+    </div>
+    <div id="spellSentence">
+        <input id="sentence" name="data.castSentence" type="text" value="{{data.castSentence}}" data-dtype="String" />
+        <span id="beforeCastTime">Durée incantation: </span><input id="time" name="data.castTime" type="text"
+            value="{{data.castTime}}" data-dtype="Number" /> <span id="afterCastTime">Assauts</span>
+        <br>
+        <span id="beforeAOE">Durée du sort: </span><input id="AOE" name="data.castAOE" type="text"
+            value="{{data.castAOE}}" data-dtype="Number" /> <span id="afterAOE">Assauts</span>
+    </div>
+    <div id="spellDescription">
+        <button disabled class="active" id="buttonDescription">Description</button>
+        <button id="buttonEffect">Effet</button>
+        <button id="buttonNote">Note</button>
+        <button id="buttonSettings"><i class="fas fa-cogs"></i></button>
+        <textarea id="description" name="data.description">{{data.description}}</textarea>
+        <textarea id="effect" name="data.effect">{{data.effect}}</textarea>
+        <textarea id="note" name="data.note">{{data.note}}</textarea>
+        <div id="settingsSpells">
+            <table>
+                <tr>
+                    <td><span>Confrontation/Epreuve</span></td>
+                    <td> <input id="" name="data.test" type="text" value="{{data.test}}" data-dtype="String" /></td>
+                </tr>
+                <tr>
+                    <td><span>Dégats</span></td>
+                    <td> <input id="" name="data.damage" type="text" value="{{data.damage}}" data-dtype="String" />
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</form>

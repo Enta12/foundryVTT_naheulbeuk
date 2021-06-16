@@ -1,0 +1,65 @@
+{
+    "name": "naheulbeuk",
+    "title": "Le donjon de naheulbeuk",
+    "description": "JDR naheulbeuk azaz",
+    "version": "1.0.0",
+    "templateVersion": 2,
+    "author": "Sarkande",
+
+    "esmodules": [
+      "./naheulbeuk.js"
+    ],
+    "styles": [
+      "styles/naheulbeuk.css"
+    ],
+    "scripts":[],
+    "packs": [
+
+
+      {
+        "name": "spells",
+        "label": "Compendium des sorts",
+        "systems": ["naheulbeuk"],
+        "path": "./packs/spells.db",
+        "entity": "Item"
+      },
+      {
+        "name": "skills",
+        "label": "Compendium des compétences",
+        "systems": ["naheulbeuk"],
+        "path": "./packs/skills.db",
+        "entity": "Item"
+      },
+      {
+        "name": "equipments",
+        "label": "Compendium des equipements",
+        "systems": ["naheulbeuk"],
+        "path": "./packs/equipments.db",
+        "entity": "Item"
+      },
+      {
+        "name": "monster",
+        "label": "Compendium des monstres",
+        "systems": ["naheulbeuk"],
+        "path": "./packs/monsters.db",
+        "entity": "Actor"
+      }
+
+    ],
+    "languages": [
+      {
+        "lang": "fr",
+        "name": "French",
+        "path": "lang/fr.json"
+      }
+    ],
+
+    "initiative": "resources.courage",
+    "gridDistance": 1,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "resources.health",
+    "secondaryTokenAttribute": "resources.mana",
+    "url": "",
+    "manifest": "",
+    "download": ""
+  }

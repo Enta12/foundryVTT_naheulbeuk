@@ -1,0 +1,306 @@
+<div id="characterInformations">
+    <div id="characterAvatar">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        <input class="caption" value="Brol Pecaud" />
+    </div>
+    <div id="characterResume">
+        <span class="title">FICHE DE HÉROS </span>
+        <table>
+            <tr>
+                <td>Origine: </td>
+                <td><input name="data.race" value="{{data.race}}" data-dtype="String" /></td>
+                <td>Métier: </td>
+                <td><input name="data.job" value="{{data.job}}" data-dtype="String" /></td>
+            </tr>
+            <tr>
+                <td>Sexe:</td>
+                <td><input name="data.sex" value="{{data.sex}}" data-dtype="String" /></td>
+                <td>Âge: </td>
+                <td><input name="data.year" value="{{data.year}}" data-dtype="String" /></td>
+            </tr>
+            <tr>
+                <td>Taille: </td>
+                <td><input name="data.size" value="{{data.size}}" data-dtype="String" /></td>
+                <td>Poids: </td>
+                <td><input name="data.weigth" value="{{data.weigth}}" data-dtype="String" /></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="characterAbilities">
+
+    <span class="title">Caractéristiques </span>
+    <table>
+        <tr>
+            <th></th>
+            <th>Tot.</th>
+            <th>Base</th>
+            <th>Eq</th>
+            <th>Mod</th>
+        </tr>
+        <tr>
+            <td>AT: </td>
+            <td><input disabled name="data.abilities.AT.total" value="{{data.abilities.AT.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.AT.base" value="{{data.abilities.AT.base}}" data-dtype="Number" />
+            </td>
+            <td><input disabled name="data.abilities.AT.bonus" value="{{data.abilities.AT.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.AT.mod" value="{{data.abilities.AT.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>PRD: </td>
+            <td><input disabled name="data.abilities.PRD.total" value="{{data.abilities.PRD.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.PRD.base" value="{{data.abilities.PRD.base}}" data-dtype="Number" />
+            </td>
+            <td><input disabled name="data.abilities.PRD.bonus" value="{{data.abilities.PRD.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.PRD.mod" value="{{data.abilities.PRD.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Courage: </td>
+            <td><input disabled name="data.abilities.COU.total" value="{{data.abilities.COU.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.COU.base" value="{{data.abilities.COU.base}}" data-dtype="Number" />
+            </td>
+            <td><input disabled name="data.abilities.COU.bonus" value="{{data.abilities.COU.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.COU.mod" value="{{data.abilities.COU.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Intelligence: </td>
+            <td><input disabled name="data.abilities.INT.total" value="{{data.abilities.INT.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.INT.base" value="{{data.abilities.INT.base}}" data-dtype="Number" />
+            </td>
+            <td><input disabled name="data.abilities.INT.bonus" value="{{data.abilities.INT.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.INT.mod" value="{{data.abilities.INT.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Charisme:</td>
+            <td><input disabled name="data.abilities.CHA.total" value="{{data.abilities.CHA.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.CHA.base" value="{{data.abilities.CHA.base}}" data-dtype="Number" />
+            </td>
+            <td><input disabled name="data.abilities.CHA.bonus" value="{{data.abilities.CHA.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.CHA.mod" value="{{data.abilities.CHA.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Adresse: </td>
+            <td><input disabled name="data.abilities.ADR.total" value="{{data.abilities.ADR.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.ADR.base" value="{{data.abilities.ADR.base}}" data-dtype="Number" />
+            </td>
+            <td><input disabled name="data.abilities.ADR.bonus" value="{{data.abilities.ADR.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.ADR.mod" value="{{data.abilities.ADR.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Force </td>
+            <td><input disabled name="data.abilities.FO.total" value="{{data.abilities.FO.total}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.FO.base" value="{{data.abilities.FO.base}}" data-dtype="Number" /></td>
+            <td><input disabled name="data.abilities.FO.bonus" value="{{data.abilities.FO.bonus}}"
+                    data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.FO.mod" value="{{data.abilities.FO.mod}}" data-dtype="Number" /></td>
+        </tr>
+    </table>
+</div>
+<div id="characterVitals">
+    <table>
+        <tr>
+            <th colspan="2">Energie vitale</th>
+        </tr>
+        <tr>
+            <td><input name="data.abilities.HP.total" value="{{data.abilities.HP.total}}" data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.HPMAX.total" value="{{data.abilities.HPMAX.total}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">Energie astrale</th>
+        </tr>
+        <tr>
+            <td><input name="data.abilities.MP.total" value="{{data.abilities.MP.total}}" data-dtype="Number" />
+            </td>
+            <td><input name="data.abilities.MPMAX.total" value="{{data.abilities.MPMAX.total}}" data-dtype="Number" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="characterMagicSpecial">
+    <table>
+        <tr>
+            <th></th>
+            <th>Total</th>
+            <th>Base</th>
+            <th>Mod</th>
+        </tr>
+        <tr>
+            <td>Magie Phys.</td>
+            <td><input disabled name="data.abilities.MagPHY.total" value="{{data.abilities.MagPHY.total}}"
+                    data-dtype="Number" /></td>
+            <td><input disabled name="data.abilities.MagPHY.base" value="{{data.abilities.MagPHY.base}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.MagPHY.mod" value="{{data.abilities.MagPHY.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Magie Psy.</td>
+            <td><input disabled name="data.abilities.MagPSY.total" value="{{data.abilities.MagPSY.total}}"
+                    data-dtype="Number" /></td>
+            <td><input disabled name="data.abilities.MagPSY.base" value="{{data.abilities.MagPSY.base}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.MagPSY.mod" value="{{data.abilities.MagPSY.mod}}" data-dtype="Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>Résist. Magie</td>
+            <td><input disabled name="data.abilities.ReMag.total" value="{{data.abilities.ReMag.total}}"
+                    data-dtype="Number" /></td>
+            <td><input disabled name="data.abilities.ReMag.base" value="{{data.abilities.ReMag.base}}"
+                    data-dtype="Number" /></td>
+            <td><input name="data.abilities.ReMag.mod" value="{{data.abilities.ReMag.mod}}" data-dtype="Number" /></td>
+        </tr>
+
+    </table>
+</div>
+
+<div id="characterSens">
+    <table>
+        <tr>
+            <th colspan="2">Sens</th>
+        </tr>
+        <tr>
+            <td>Langue(s): </td>
+            <td><input name="data.language" value="{{data.language}}" data-dtype="String" /></td>
+
+        </tr>
+        <tr>
+            <td>Vision: </td>
+            <td><input name="data.vision" value="{{data.vision}}" data-dtype="String" /></td>
+
+        </tr>
+        <tr>
+            <td>Nyctalopie:</td>
+            <td><input name="data.nyctalopia" value="{{data.nyctalopia}}" data-dtype="String" /></td>
+
+        </tr>
+        <tr>
+            <td>Ouïe: </td>
+            <td><input name="data.hearing" value="{{data.hearing}}" data-dtype="String" /></td>
+
+        </tr>
+        <tr>
+            <td>Odorat </td>
+            <td><input name="data.smell" value="{{data.smell}}" data-dtype="String" /></td>
+
+        </tr>
+    </table>
+</div>
+<div id="characterLevel">
+    <table>
+        <tr>
+            <th colspan="3">Experience</th>
+        </tr>
+        <tr>
+            <td><input name="data.xp" value="{{data.xp}}" data-dtype="String" /></td>
+            <td>/</td>
+            <td><input name="data.xpMax" value="{{data.xpMax}}" data-dtype="String" /></td>
+        </tr>
+        <tr>
+            <td colspan="3">Niveau</td>
+        </tr>
+        <tr>
+            <td colspan="3"><input name="data.level" value="{{data.level}}" data-dtype="String" /></td>
+        </tr>
+    </table>
+</div>
+<div id="characterDestiny">
+    <table>
+        <tr>
+            <th colspan="3">Points de destin</th>
+        </tr>
+        <tr>
+            <td colspan="3"><input name="data.destinyPoint" value="{{data.destinyPoint}}" data-dtype="String" />
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="characterGold">
+    <table>
+        <tr>
+            <th colspan="2">Richesses</th>
+        </tr>
+        <tr>
+            <td>Pièces d'Or</td>
+            <td><input name="data.gold" value="{{data.gold}}" data-dtype="Number" /></td>
+        </tr>
+        <tr>
+            <td>Lingots de Berylium</td>
+            <td><input name="data.berylium" value="{{data.berylium}}" data-dtype="Number" /></td>
+        </tr>
+        <tr>
+            <td>Lingots de Thritil</td>
+            <td><input name="data.thritil" value="{{data.thritil}}" data-dtype="Number" /></td>
+        </tr>
+        <tr>
+            <td>Total (en Or)</td>
+            <td><input disabled name="data.goldTotal" value="{{data.goldTotal}}" data-dtype="Number" /></td>
+        </tr>
+    </table>
+</div>
+<div id="characterPR">
+    <table>
+        <tr>
+            <th colspan="3">PR</th>
+        </tr>
+        <tr>
+            <td colspan="3">{{data.level}}</td>
+        </tr>
+        <tr>
+            <td colspan="3">PR Mag</td>
+        </tr>
+        <tr>
+            <td colspan="3">{{data.level}}</td>
+        </tr>
+    </table>
+</div>
+<div id="characterEquipment">
+    <img src="systems/naheulbeuk/pictures/silhouette.svg" alt="">
+</div>
+<div id="characterItems">
+    <h3>Equipement</h3>
+    <ol class="actor-items">
+        {{#each actor.items as |item id|}}
+        {{#ifCond item.type '!=' "spell"}}
+
+        <li class="item flexrow" data-item-id="{{item._id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
+            <h4 class="item-name">{{item.name}}</h4>
+            <div class="item-controls">
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-eye"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </li>
+        {{/ifCond}}
+        {{/each}}
+    </ol>
+</div>
