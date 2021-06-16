@@ -1,9 +1,9 @@
 {
     "name": "naheulbeuk",
     "title": "Le donjon de naheulbeuk",
-    "description": "JDR naheulbeuk azaz",
-    "version": "1.0.0",
-    "templateVersion": 2,
+    "description": "JDR naheulbeuk by Sarkande",
+    "version": "1.0.1",
+    "templateVersion": 3,
     "author": "Sarkande",
 
     "esmodules": [
@@ -12,7 +12,6 @@
     "styles": [
         "styles/naheulbeuk.css"
     ],
-    "scripts": [],
     "packs": [
 
 
