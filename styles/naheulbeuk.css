@@ -490,6 +490,7 @@ textarea {
 
 #characterSettingsSheet {
     display: none;
+    overflow-y: scroll !important;
 }
 
 #buttonsCharacterSheet button {
@@ -507,15 +508,18 @@ textarea {
 }
 
 #characterSheet {
-    min-height: 750px !important;
-    min-width: 820px !important;
-    overflow: hidden;
-}
-
-.window-content {
-    overflow: hidden !important;
+    min-height: 670px !important;
+    min-width: 500px !important;
 }
 
 #buttonCharacterSheetCharacter {
     width: 105px!important;
+}
+
+#characterInformationSheet {
+    overflow: hidden !important;
+}
+
+#spellBookSheet table {
+    text-align: center;
 }

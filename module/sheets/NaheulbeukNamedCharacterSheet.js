@@ -185,10 +185,6 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
         });
 
         $("#buttonCharacterSheetSpellBook").click(function() {
-            console.log("buttonCharacterSheetSpellBook");
-            console.log($("#spellBookSheet"));
-
-
             $("#spellBookSheet").css('display', 'block');
             $("#characterInformationSheet").hide();
             $("#characterSettingsSheet").hide();
