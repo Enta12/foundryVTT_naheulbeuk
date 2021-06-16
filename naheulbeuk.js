@@ -6,7 +6,10 @@ async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/naheulbeuk/templates/partials/character-information-sheet.hbs",
         "systems/naheulbeuk/templates/partials/character-spell-book.hbs",
-        "systems/naheulbeuk/templates/partials/character-settings-sheet.hbs"
+        "systems/naheulbeuk/templates/partials/character-settings-sheet.hbs",
+        "systems/naheulbeuk/templates/cards/spell-book-card.hbs"
+
+
     ];
     return loadTemplates(templatePaths);
 }
@@ -39,9 +42,15 @@ Handlebars.registerHelper('ifCond', function(v1, operator, v2, options) {
             return options.inverse(this);
     }
 });
-Handlebars.registerHelper('get_length', function(obj) {
+Handlebars.registerHelper('getLength', function(obj) {
     return obj.length;
 });
+
+Handlebars.registerHelper('translationHelper', function(typeName, str) {
+    return game.i18n.localize(naheulbeuk[typeName][str]);
+});
+
+
 
 console.log("NAHEULBEUK | naheulbeuk.js load");
 
