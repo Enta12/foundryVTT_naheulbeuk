@@ -55,6 +55,8 @@
     "initiative": "resources.courage",
     "gridDistance": 1,
     "gridUnits": "m",
+    "minimumCoreVersion": "0.8.2",
+    "compatibleCoreVersion": "0.8.7",
     "primaryTokenAttribute": "resources.health",
     "secondaryTokenAttribute": "resources.mana",
     "url": "https://gitlab.com/aperezgo74/naheulbeuk",
