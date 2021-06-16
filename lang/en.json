@@ -1,0 +1,43 @@
+{
+    "ITEM.TypeWeapon": "Arme",
+    "ITEM.TypeArmor": "Armure",
+    "ITEM.TypeSpell": "Sort",
+    "ACTOR.TypeHeros": "Héros",
+    "ACTOR.TypeMonster": "Monstre",
+    "ACTOR.TypeNpc": "PNJ",
+    "ACTOR.TypeBoss": "Boss",
+
+    "naheulbeuk": {
+        "attack": {
+            "none": "",
+            "blunt": "Contondant",
+            "sharp": "Tranchant",
+            "range": "Distance"
+        },
+        "protectionItem": {
+            "none": "",
+            "head": "Tête",
+            "arm": "Bras",
+            "hand": "Mains",
+            "body": "Corps",
+            "leg": "Jambes",
+            "shield": "Bouclier",
+            "foot": "Pieds"
+        },
+        "school": {
+            "none": "",
+            "generalism": "Generaliste",
+            "wind": "Vent",
+            "waterIce": "Eau et Glace",
+            "thermo": "Thermodynamique",
+            "earth": "Terre",
+            "fight": "Combat",
+            "summoner": "Invocateur",
+            "necro": "Nécromancien",
+            "blackMage": "Magie noire de Tzinntch",
+            "metamorph": "Métamorphe"
+        }
+
+
+    }
+}

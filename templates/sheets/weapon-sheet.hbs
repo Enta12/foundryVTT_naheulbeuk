@@ -1,0 +1,55 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="icons/svg/sword.svg" data-edit="img" title="icons/svg/sword.svg" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <table>
+        <tr>
+            <th>Types de dégats</th>
+            <th>Mod.AT</th>
+            <th>Mod.PRD</th>
+            <th>RUP</th>
+            <th>Dégats</th>
+            <th>Critique</th>
+            <th>Fumble</th>
+        </tr>
+        <tr>
+            <td>
+                <select name="data.attackWith">
+                    {{#select data.attackWith}}
+                        {{#each config.attackTypes as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                    {{/select}}
+                </select>
+            </td>
+            <td><input name="data.modAT" type="text" value="{{data.modAT}}" data-dtype="Number" /></td>
+            <td><input name="data.modPRD" type="text" value="{{data.modPRD}}" data-dtype="Number" /></td>
+            <td><input name="data.RUP" type="text" value="{{data.RUP}}" data-dtype="String" /></td>
+            <td><input name="data.damage" type="text" value="{{data.damage}}" data-dtype="String" /></td>
+            <td><input name="data.crit" type="text" value="{{data.crit}}" data-dtype="Number" /></td>
+            <td><input name="data.fumble" type="text" value="{{data.fumble}}" data-dtype="Number" /></td>
+        </tr>
+    </table>
+<h2>Bonus: </h2>
+    <table>
+        <tr>
+
+            <th>COU</th>
+            <th>INT</th>
+            <th>CHA</th>
+            <th>ADR</th>
+            <th>FO</th>
+
+        </tr>
+        <tr>
+
+            <td><input name="data.abilities.COU" type="text" value="{{data.abilities.COU}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.INT" type="text" value="{{data.abilities.INT}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.CHA" type="text" value="{{data.abilities.CHA}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.ADR" type="text" value="{{data.abilities.ADR}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.FO" type="text" value="{{data.abilities.FO}}" data-dtype="Number" /></td>
+        </tr>
+    </table>
+    <textarea name="data.description">{{data.description}}</textarea>
+</form>
