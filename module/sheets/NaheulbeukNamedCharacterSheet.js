@@ -161,8 +161,8 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
 
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
-            const li = $(ev.currentTarget).parents(".item");
-            const item = this.actor.items.get(li.data("itemId"));
+            const tr = $(ev.currentTarget).parents(".item");
+            const item = this.actor.items.get(tr.data("itemId"));
             item.delete();
             li.slideUp(200, () => this.render(false));
         });
@@ -177,10 +177,10 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
         });
 
         $("#buttonCharacterSheetCharacter").click(function() {
-            console.log("buttonCharacterSheetCharacter");
             $("#characterInformationSheet").show();
             $("#spellBookSheet").hide();
             $("#characterSettingsSheet").hide();
+            $("#characterSkillsSheet").hide();
 
         });
 
@@ -188,16 +188,21 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
             $("#spellBookSheet").css('display', 'block');
             $("#characterInformationSheet").hide();
             $("#characterSettingsSheet").hide();
+            $("#characterSkillsSheet").hide();
 
         });
 
         $("#buttonCharacterSheetSettings").click(function() {
-            console.log("buttonCharacterSheetSettings");
-
             $("#characterSettingsSheet").show();
             $("#characterInformationSheet").hide();
             $("#spellBookSheet").hide();
-
+            $("#characterSkillsSheet").hide();
+        });
+        $("#buttonCharacterSheetSkills").click(function() {
+            $("#characterSkillsSheet").show();
+            $("#characterSettingsSheet").hide();
+            $("#characterInformationSheet").hide();
+            $("#spellBookSheet").hide();
         });
 
 

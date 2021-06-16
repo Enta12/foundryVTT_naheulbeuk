@@ -1,11 +1,12 @@
+<tr class="item" data-item-id="{{spell._id}}">
+    <td><img src="{{spell.img}}" title="{{spell.name}}" width="24" height="24" /></td>
+    <td>{{translationHelper "school" spell.data.school}}</td>
+    <td>{{spell.name}}</td>
+    <td>sort niv. {{spell.data.spellLevel}}</td>
+    <td>{{spell.data.cost}} PA</td>
+    <div class="item-controls">
+    <td><a class="item-control item-edit" title="Edit Item"><i class="fas fa-eye"></i></a></td>
+    <td><a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a></td>
+    </div>
+</tr>
 
-
-            <tr>
-                <td><img src="{{spell.img}}" title="{{spell.name}}" width="24" height="24"/></td>
-                <td>{{translationHelper "school" spell.data.school}}</td>
-                <td>{{spell.name}}</td>
-                <td>sort niv. {{spell.data.spellLevel}}</td>
-                <td>{{spell.data.cost}} PA</td>
-                <td><a class="item-control item-edit" title="Edit Item"><i class="fas fa-eye"></i></a></td>
-                <td><a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a></td>
-            </tr>
