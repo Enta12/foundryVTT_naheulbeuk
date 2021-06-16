@@ -7,59 +7,57 @@
     "author": "Sarkande",
 
     "esmodules": [
-      "./naheulbeuk.js"
+        "./naheulbeuk.js"
     ],
     "styles": [
-      "styles/naheulbeuk.css"
+        "styles/naheulbeuk.css"
     ],
-    "scripts":[],
+    "scripts": [],
     "packs": [
 
 
-      {
-        "name": "spells",
-        "label": "Compendium des sorts",
-        "systems": ["naheulbeuk"],
-        "path": "./packs/spells.db",
-        "entity": "Item"
-      },
-      {
-        "name": "skills",
-        "label": "Compendium des compétences",
-        "systems": ["naheulbeuk"],
-        "path": "./packs/skills.db",
-        "entity": "Item"
-      },
-      {
-        "name": "equipments",
-        "label": "Compendium des equipements",
-        "systems": ["naheulbeuk"],
-        "path": "./packs/equipments.db",
-        "entity": "Item"
-      },
-      {
-        "name": "monster",
-        "label": "Compendium des monstres",
-        "systems": ["naheulbeuk"],
-        "path": "./packs/monsters.db",
-        "entity": "Actor"
-      }
+        {
+            "name": "spells",
+            "label": "Compendium des sorts",
+            "systems": ["naheulbeuk"],
+            "path": "./packs/spells.db",
+            "entity": "Item"
+        },
+        {
+            "name": "skills",
+            "label": "Compendium des compétences",
+            "systems": ["naheulbeuk"],
+            "path": "./packs/skills.db",
+            "entity": "Item"
+        },
+        {
+            "name": "equipments",
+            "label": "Compendium des equipements",
+            "systems": ["naheulbeuk"],
+            "path": "./packs/equipments.db",
+            "entity": "Item"
+        },
+        {
+            "name": "monster",
+            "label": "Compendium des monstres",
+            "systems": ["naheulbeuk"],
+            "path": "./packs/monsters.db",
+            "entity": "Actor"
+        }
 
     ],
-    "languages": [
-      {
+    "languages": [{
         "lang": "fr",
         "name": "French",
         "path": "lang/fr.json"
-      }
-    ],
+    }],
 
     "initiative": "resources.courage",
     "gridDistance": 1,
     "gridUnits": "m",
     "primaryTokenAttribute": "resources.health",
     "secondaryTokenAttribute": "resources.mana",
-    "url": "",
-    "manifest": "",
-    "download": ""
-  }
+    "url": "https://gitlab.com/aperezgo74/naheulbeuk",
+    "manifest": "https://gitlab.com/aperezgo74/naheulbeuk/-/blob/main/system.json",
+    "download": "https://gitlab.com/aperezgo74/naheulbeuk/-/archive/main/naheulbeuk-main.zip"
+}
