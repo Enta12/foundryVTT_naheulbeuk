@@ -1,24 +1,24 @@
 export const naheulbeuk = {};
 
 naheulbeuk.attackTypes = {
-    none : "",
+    none: "",
     blunt: "naheulbeuk.attack.blunt",
     sharp: "naheulbeuk.attack.sharp",
     range: "naheulbeuk.attack.range"
 };
 
 naheulbeuk.protectionItem = {
-    none : "",
+    none: "",
     head: "naheulbeuk.protectionItem.head",
-    arm:  "naheulbeuk.protectionItem.arm",
+    arm: "naheulbeuk.protectionItem.arm",
     hand: "naheulbeuk.protectionItem.hand",
     body: "naheulbeuk.protectionItem.body",
-    leg:  "naheulbeuk.protectionItem.leg",
-    shield:"naheulbeuk.protectionItem.shield",
-    foot:"naheulbeuk.protectionItem.foot"
+    leg: "naheulbeuk.protectionItem.leg",
+    shield: "naheulbeuk.protectionItem.shield",
+    foot: "naheulbeuk.protectionItem.foot"
 }
 naheulbeuk.school = {
-    none : "",
+    none: "",
     generalism: "naheulbeuk.school.generalism",
     wind: "naheulbeuk.school.wind",
     waterIce: "naheulbeuk.school.waterIce",
@@ -28,8 +28,13 @@ naheulbeuk.school = {
     summoner: "naheulbeuk.school.summoner",
     necro: "naheulbeuk.school.necro",
     blackMage: "naheulbeuk.school.blackMage",
-    metamorph: "naheulbeuk.school.metamorph"
-}
+    metamorph: "naheulbeuk.school.metamorph",
+    dlul: "naheulbeuk.school.dlul",
+    youclidh: "naheulbeuk.school.youclidh",
+    slanoush: "naheulbeuk.school.slanoush",
+    adathie: "naheulbeuk.school.adathie"
+};
 
-
-
+naheulbeuk.settings = {
+    choice: 0
+};

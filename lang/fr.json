@@ -35,9 +35,13 @@
             "summoner": "Invocateur",
             "necro": "Nécromancien",
             "blackMage": "Magie noire de Tzinntch",
-            "metamorph": "Métamorphe"
+            "metamorph": "Métamorphe",
+            "dlul": "Dlul",
+            "youclidh": "Youclidh",
+            "slanoush": "Slanoush",
+            "adathie": "Adathie"
         }
-
-
     }
+
+
 }

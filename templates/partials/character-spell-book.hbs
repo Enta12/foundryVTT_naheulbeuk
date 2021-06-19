@@ -1,9 +1,5 @@
-<h1><i class="fas fa-journal-whills"></i> Grimoires de magie et prêtrise</h1>
+<h1><i class="fas fa-journal-whills"></i> Grimoires de magie </h1>
 
-
-
-{{#ifCond spells.level1.length '>' 0}}
-<button>sort level 1</button>
 <table>
     <tr>
         <th></th>
@@ -13,163 +9,97 @@
         <th>Cout</th>
         <th></th>
         <th></th>
+    </tr>
+
+    {{#ifCond spells.level1.length '>' 0}}
+    <tr>
+        <th colspan="7">sort level 1</th>
     </tr>
     {{#each spells.level1 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
 
-{{#ifCond spells.level2.length '>' 0}}
-<button>sort level 2</button>
-<table>
+    {{/ifCond}}
+
+    {{#ifCond spells.level2.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 2</th>
     </tr>
     {{#each spells.level2 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level3.length '>' 0}}
-<button>sort level 3</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level3.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 3</th>
     </tr>
     {{#each spells.level3 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level4.length '>' 0}}
-<button>sort level 4</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level4.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 4</th>
     </tr>
     {{#each spells.level4 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level5.length '>' 0}}
-<button>sort level 5</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level5.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 5</th>
     </tr>
     {{#each spells.level5 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level6.length '>' 0}}
-<button>sort level 6</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level6.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 6</th>
     </tr>
     {{#each spells.level6 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level7.length '>' 0}}
-<button>sort level 7</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level7.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 7</th>
     </tr>
     {{#each spells.level7 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level8.length '>' 0}}
-<button>sort level 8</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level8.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 8</th>
     </tr>
     {{#each spells.level8 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level9.length '>' 0}}
-<button>sort level 9</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level9.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 9</th>
     </tr>
     {{#each spells.level9 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
-</table>
-{{/ifCond}}
-{{#ifCond spells.level10.length '>' 0}}
-<button>sort level 10</button>
-<table>
+
+    {{/ifCond}}
+    {{#ifCond spells.level10.length '>' 0}}
     <tr>
-        <th></th>
-        <th>Ecole</th>
-        <th>Nom</th>
-        <th>Niveau</th>
-        <th>Cout</th>
-        <th></th>
-        <th></th>
+        <th colspan="7">sort level 10</th>
     </tr>
     {{#each spells.level10 as |spell id|}}
     {{>"systems/naheulbeuk/templates/cards/spell-book-card.hbs" spell=spell}}
     {{/each}}
+
+    {{/ifCond}}
 </table>
-{{/ifCond}}

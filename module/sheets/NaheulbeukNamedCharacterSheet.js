@@ -77,7 +77,10 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
         data.data.abilities.CHA.total = parseInt(data.data.abilities.CHA.base) + parseInt(data.data.abilities.CHA.bonus) + parseInt(data.data.abilities.CHA.mod);
         data.data.abilities.ADR.total = parseInt(data.data.abilities.ADR.base) + parseInt(data.data.abilities.ADR.bonus) + parseInt(data.data.abilities.ADR.mod);
         data.data.abilities.FO.total = parseInt(data.data.abilities.FO.base) + parseInt(data.data.abilities.FO.bonus) + parseInt(data.data.abilities.FO.mod);
+
         data.data.abilities.PR.total = parseInt(data.data.abilities.PR.base) + parseInt(data.data.abilities.PR.bonus) + parseInt(data.data.abilities.PR.mod);
+        data.data.abilities.PR.total = data.data.abilities.PR.total > parseInt(data.data.PRMax) ? parseInt(data.data.PRMax) : data.data.abilities.PR.total;
+
         data.data.abilities.PRMag.total = parseInt(data.data.abilities.PRMag.base) + parseInt(data.data.abilities.PRMag.bonus) + parseInt(data.data.abilities.PRMag.mod);
         data.data.abilities.HP.total = parseInt(data.data.abilities.HP.base) + parseInt(data.data.abilities.HP.bonus);
         data.data.abilities.HPMAX.total = parseInt(data.data.abilities.HPMAX.base) + parseInt(data.data.abilities.HPMAX.bonus);
@@ -167,6 +170,110 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
             li.slideUp(200, () => this.render(false));
         });
 
+        $("#buttonsCharacterSheet .active").attr('disabled', false)
+        $("#buttonsCharacterSheet .active").removeClass("active");
+
+        var showCharacterSheetCharacter = function() {
+            $("#characterInformationSheet").show();
+            $("#spellBookSheet").hide();
+            $("#characterSettingsSheet").hide();
+            $("#characterSkillsSheet").hide();
+            $("#characterBagsSheet").hide();
+
+            $("#buttonCharacterSheetCharacter").attr('disabled', true);
+            $("#buttonCharacterSheetCharacter").addClass("active");
+        }
+
+        var showCharacterSheetSpellBook = function() {
+            $("#spellBookSheet").css('display', 'block');
+            $("#characterInformationSheet").hide();
+            $("#characterSettingsSheet").hide();
+            $("#characterSkillsSheet").hide();
+            $("#characterBagsSheet").hide();
+
+            $("#buttonCharacterSheetSpellBook").attr('disabled', true);
+            $("#buttonCharacterSheetSpellBook").addClass("active");
+        }
+
+        var showCharacterSheetSettings = function() {
+            $("#characterSettingsSheet").show();
+            $("#characterInformationSheet").hide();
+            $("#spellBookSheet").hide();
+            $("#characterSkillsSheet").hide();
+            $("#characterBagsSheet").hide();
+
+            $("#buttonCharacterSheetSettings").attr('disabled', true);
+            $("#buttonCharacterSheetSettings").addClass("active");
+        }
+
+        var showCharacterSheetSkills = function() {
+            $("#characterSkillsSheet").show();
+            $("#characterSettingsSheet").hide();
+            $("#characterInformationSheet").hide();
+            $("#spellBookSheet").hide();
+            $("#characterBagsSheet").hide();
+
+            $("#buttonCharacterSheetSkills").attr('disabled', true);
+            $("#buttonCharacterSheetSkills").addClass("active");
+        }
+
+        var showCharacterSheetBags = function() {
+            $("#characterBagsSheet").show();
+            $("#characterSkillsSheet").hide();
+            $("#characterSettingsSheet").hide();
+            $("#characterInformationSheet").hide();
+            $("#spellBookSheet").hide();
+
+            $("#buttonCharacterSheetBags").attr('disabled', true);
+            $("#buttonCharacterSheetBags").addClass("active");
+        }
+
+        switch (CONFIG.naheulbeuk.settings.choice) {
+            case 0:
+                showCharacterSheetCharacter();
+                break;
+            case 1:
+                showCharacterSheetSpellBook();
+                break;
+            case 2:
+                showCharacterSheetSkills();
+                break;
+            case 3:
+                showCharacterSheetBags();
+                break;
+            case 4:
+                showCharacterSheetSettings();
+                break;
+
+        }
+
+
+        $("#buttonCharacterSheetCharacter").click(function() {
+            showCharacterSheetCharacter();
+            console.log("test 1");
+            CONFIG.naheulbeuk.settings.choice = 0;
+        });
+
+        $("#buttonCharacterSheetSpellBook").click(function() {
+            showCharacterSheetSpellBook();
+            console.log("test 11");
+            CONFIG.naheulbeuk.settings.choice = 1;
+        });
+
+        $("#buttonCharacterSheetSkills").click(function() {
+            showCharacterSheetSkills();
+            CONFIG.naheulbeuk.settings.choice = 2;
+        });
+
+        $("#buttonCharacterSheetBags").click(function() {
+            showCharacterSheetBags();
+            CONFIG.naheulbeuk.settings.choice = 3;
+        });
+
+        $("#buttonCharacterSheetSettings").click(function() {
+            showCharacterSheetSettings();
+            CONFIG.naheulbeuk.settings.choice = 4;
+        });
 
         $("#buttonsCharacterSheet button").click(function() {
             $("#buttonsCharacterSheet .active").attr('disabled', false)
@@ -176,34 +283,6 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
             $(this).addClass("active");
         });
 
-        $("#buttonCharacterSheetCharacter").click(function() {
-            $("#characterInformationSheet").show();
-            $("#spellBookSheet").hide();
-            $("#characterSettingsSheet").hide();
-            $("#characterSkillsSheet").hide();
-
-        });
-
-        $("#buttonCharacterSheetSpellBook").click(function() {
-            $("#spellBookSheet").css('display', 'block');
-            $("#characterInformationSheet").hide();
-            $("#characterSettingsSheet").hide();
-            $("#characterSkillsSheet").hide();
-
-        });
-
-        $("#buttonCharacterSheetSettings").click(function() {
-            $("#characterSettingsSheet").show();
-            $("#characterInformationSheet").hide();
-            $("#spellBookSheet").hide();
-            $("#characterSkillsSheet").hide();
-        });
-        $("#buttonCharacterSheetSkills").click(function() {
-            $("#characterSkillsSheet").show();
-            $("#characterSettingsSheet").hide();
-            $("#characterInformationSheet").hide();
-            $("#spellBookSheet").hide();
-        });
 
 
     }
