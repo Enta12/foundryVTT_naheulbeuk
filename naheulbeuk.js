@@ -8,7 +8,11 @@ async function preloadHandlebarsTemplates() {
         "systems/naheulbeuk/templates/partials/character-spell-book.hbs",
         "systems/naheulbeuk/templates/partials/character-settings-sheet.hbs",
         "systems/naheulbeuk/templates/cards/spell-book-card.hbs",
-        "systems/naheulbeuk/templates/partials/character-skills-sheet.hbs"
+        "systems/naheulbeuk/templates/partials/character-skills-sheet.hbs",
+        "systems/naheulbeuk/templates/cards/skill-book-card.hbs",
+        "systems/naheulbeuk/templates/partials/character-bags-sheet.hbs"
+
+
     ];
     return loadTemplates(templatePaths);
 }

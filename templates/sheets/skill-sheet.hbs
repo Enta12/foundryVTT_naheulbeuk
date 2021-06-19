@@ -1,0 +1,29 @@
+<form id="skillSheetForm" class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.img}}" height="64" width="64" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+
+    <table>
+        <tr>
+
+            <th>COU</th>
+            <th>INT</th>
+            <th>CHA</th>
+            <th>ADR</th>
+            <th>FO</th>
+
+        </tr>
+        <tr>
+
+            <td><input name="data.abilities.COU" type="text" value="{{data.abilities.COU}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.INT" type="text" value="{{data.abilities.INT}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.CHA" type="text" value="{{data.abilities.CHA}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.ADR" type="text" value="{{data.abilities.ADR}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.FO" type="text" value="{{data.abilities.FO}}" data-dtype="Number" /></td>
+        </tr>
+    </table>
+    <input name="data.useDescription" type="text" value="{{data.useDescription}}" data-dtype="String" />
+
+    <textarea name="data.description">{{data.description}}</textarea>
+</form>

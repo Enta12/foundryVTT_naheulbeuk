@@ -1,1 +1,21 @@
-test2
+<h1><i class="fas fa-journal-whills"></i> Compétences</h1>
+
+<table id="characterSkillsTable">
+    <tr>
+        <th></th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    {{#each actor.items as |item id|}}
+    {{#ifCond item.type '==' "skill" }}
+    {{>"systems/naheulbeuk/templates/cards/skill-book-card.hbs" item=item}}
+    {{/ifCond}}
+    {{/each}}
+
+    
+
+ 
+</table>

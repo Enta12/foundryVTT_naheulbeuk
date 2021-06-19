@@ -1,7 +1,7 @@
 <div id="characterInformations">
     <div id="characterAvatar">
         <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
-        <input class="caption" value="Brol Pecaud" />
+        <input class="caption" value="{{actor.name}}" />
     </div>
     <div id="characterResume">
         <span class="title">FICHE DE HÉROS </span>
@@ -273,13 +273,19 @@
             <th colspan="3">PR</th>
         </tr>
         <tr>
-            <td colspan="3">{{data.level}}</td>
+            <td colspan="3">{{data.abilities.PR.total}}</td>
         </tr>
         <tr>
             <td colspan="3">PR Mag</td>
         </tr>
         <tr>
-            <td colspan="3">{{data.level}}</td>
+            <td colspan="3">{{data.abilities.PRMag.total}}</td>
+        </tr>
+                <tr>
+            <td colspan="3">PR Max</td>
+        </tr>
+        <tr>
+            <td colspan="3"><input name="data.PRMax" value="{{data.PRMax}}" data-dtype="Number" /></td>
         </tr>
     </table>
 </div>
@@ -290,8 +296,8 @@
     <h3>Equipement</h3>
     <ol class="actor-items">
         {{#each actor.items as |item id|}}
-        {{#ifCond item.type '!=' "spell"}}
-
+        {{#ifCond item.type '!=' "spell" }}
+        {{#ifCond item.type '!=' "skill" }}
         <li class="item flexrow" data-item-id="{{item._id}}">
             <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24" /></div>
             <h4 class="item-name">{{item.name}}</h4>
@@ -300,6 +306,7 @@
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </li>
+        {{/ifCond}}
         {{/ifCond}}
         {{/each}}
     </ol>

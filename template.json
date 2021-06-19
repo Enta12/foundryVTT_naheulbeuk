@@ -143,7 +143,8 @@
                 "sensitive",
                 "herosStats",
                 "wealth"
-            ]
+            ],
+            "PRMax": 0
         },
         "npc": {
             "templates": [
@@ -169,7 +170,8 @@
         "types": [
             "weapon",
             "armor",
-            "spell"
+            "spell",
+            "skill"
         ],
         "templates": {
             "itemDescription": {
@@ -195,7 +197,9 @@
             "damage": "2d6+3",
             "RUP": "1-3",
             "crit": 1,
-            "fumble": 20
+            "fumble": 20,
+            "secretPrincipalData": true,
+            "secretBonusData": true
 
         },
 
@@ -206,7 +210,9 @@
             ],
             "protectionItem": "",
             "PR": 0,
-            "PRMag": 0
+            "PRMag": 0,
+            "secretPrincipalData": true,
+            "secretBonusData": true
 
 
         },
@@ -227,6 +233,13 @@
             "note": ""
 
 
+        },
+        "skill": {
+            "templates": [
+                "itemDescription",
+                "abilities"
+            ],
+            "useDescription": ""
         }
     }
 }

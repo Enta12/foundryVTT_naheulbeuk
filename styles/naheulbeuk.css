@@ -26,11 +26,15 @@
 
 #characterResume {
     width: auto !important;
-    padding-top: 15px;
+    padding-top: 5px;
+    /* padding-right: 5px; */
+    right: 105px;
+    position: absolute;
+    top: 35px;
 }
 
 #characterResume table {
-    width: -webkit-fill-available;
+    width: 500px;
 }
 
 #characterResume input {
@@ -68,11 +72,12 @@
 
 .title {
     font-size: x-large;
+    bottom: 5px;
 }
 
 #characterVitals {
     padding: 5px;
-    top: 160px;
+    top: 146px;
     left: 285px;
     position: absolute;
     display: inline-block;
@@ -120,7 +125,7 @@
 
 #characterLevel {
     padding: 5px;
-    top: 265px;
+    top: 248px;
     left: 285px;
     position: absolute;
     display: inline-block;
@@ -144,7 +149,7 @@
 
 #characterDestiny {
     padding: 5px;
-    top: 370px;
+    top: 350px;
     left: 285px;
     position: absolute;
     display: inline-block;
@@ -427,7 +432,7 @@ textarea {
 
 #characterPR {
     padding: 5px;
-    top: 425px;
+    top: 404px;
     left: 285px;
     position: absolute;
     display: inline-block;
@@ -458,7 +463,7 @@ textarea {
 
 #characterMagicSpecial {
     padding: 5px;
-    top: 530px;
+    top: 551px;
     left: 265px;
     position: absolute;
     display: inline-block;
@@ -488,19 +493,28 @@ textarea {
     display: none;
 }
 
+#characterSkillsSheet {
+    display: none;
+}
+
+#characterBagsSheet {
+    display: none;
+}
+
 #characterSettingsSheet {
     display: none;
     overflow-y: scroll !important;
 }
 
 #buttonsCharacterSheet button {
-    width: 100px;
+    width: 90px;
     margin-right: -5px;
 }
 
 #buttonsCharacterSheet {
     position: absolute;
     right: 18px;
+    z-index: 2;
 }
 
 #buttonCharacterSheetSettings {
@@ -524,8 +538,7 @@ textarea {
     text-align: center;
 }
 
-#spellBookSheet table td,
-#spellBookSheet table tr {
+#spellBookSheet table td {
     width: 200px;
     height: 50px;
 }
@@ -538,5 +551,50 @@ textarea {
 }
 
 #buttonCharacterSheetSkills {
-    width: 120px !important;
+    width: 115px !important;
+}
+
+#spellBookSheet table th {
+    height: 15px;
+}
+
+table#characterSkillsTable td {
+    max-width: 150px;
+    text-align: center;
+}
+
+table#characterSkillsTable td img {
+    height: 50px;
+    width: 50px;
+    border: dashed 2px #ff0000;
+    background-color: #f58383;
+}
+
+#buttonCharacterSheetBags {
+    width: 60px !important;
+}
+
+#characterResume table {
+    width: 600px;
+    position: absolute;
+    right: -100px;
+}
+
+#characterResume .title {
+    right: 325px;
+    position: relative;
+    top: -1px;
+}
+
+#characterPR input {
+    width: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(189, 182, 153);
+    background-color: transparent;
+    text-align: center;
+}
+
+#skillSheetForm img {
+    border: dashed 2px #ff0000;
+    background-color: #f58383;
 }

@@ -1,8 +1,11 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img src="icons/svg/sword.svg" data-edit="img" title="icons/svg/sword.svg" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+        <img src="icons/svg/sword.svg" data-edit="img" title="icons/svg/sword.svg" height="64" width="64" />
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
     </header>
+    <span>Information visible</span><input type="checkbox" id="scales" name="data.secretPrincipalData" {{checked
+        data.secretPrincipalData}}>
+    {{#if data.secretPrincipalData}}
     <table>
         <tr>
             <th>Types de dégats</th>
@@ -17,9 +20,9 @@
             <td>
                 <select name="data.attackWith">
                     {{#select data.attackWith}}
-                        {{#each config.attackTypes as |name type|}}
-                            <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
+                    {{#each config.attackTypes as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
                     {{/select}}
                 </select>
             </td>
@@ -31,7 +34,12 @@
             <td><input name="data.fumble" type="text" value="{{data.fumble}}" data-dtype="Number" /></td>
         </tr>
     </table>
-<h2>Bonus: </h2>
+    {{/if}}
+    <span>Information bonus visible</span><input type="checkbox" id="scales" name="data.secretBonusData" {{checked
+        data.secretBonusData}}>
+    {{#if data.secretBonusData}}
+    <h2>Bonus: </h2>
+
     <table>
         <tr>
 
@@ -51,5 +59,6 @@
             <td><input name="data.abilities.FO" type="text" value="{{data.abilities.FO}}" data-dtype="Number" /></td>
         </tr>
     </table>
+    {{/if}}
     <textarea name="data.description">{{data.description}}</textarea>
 </form>
