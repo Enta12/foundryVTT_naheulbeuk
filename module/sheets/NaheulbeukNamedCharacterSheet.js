@@ -1,7 +1,6 @@
 export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
 
     static get defaultOptions() {
-        console.log("LOOADDING");
         return mergeObject(super.defaultOptions, {
             template: "systems/naheulbeuk/templates/sheets/namedCharacter-sheet.hbs",
             classes: ["naheulbeuk", "sheet", "namedCharacter"]
@@ -19,6 +18,7 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
         data.actor = actorData;
         data.data = actorData.data;
         data.config = CONFIG.naheulbeuk;
+
         data.spells = {
             list: [],
             level1: [],
@@ -34,73 +34,13 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
         };
 
 
-        data.data.abilities.ADR.bonus = 0;
-        data.data.abilities.CHA.bonus = 0;
-        data.data.abilities.COU.bonus = 0;
-        data.data.abilities.FO.bonus = 0;
-        data.data.abilities.INT.bonus = 0;
-        data.data.abilities.AT.bonus = 0;
-        data.data.abilities.PRD.bonus = 0;
-        data.data.abilities.PR.bonus = 0;
-        data.data.abilities.PRMag.bonus = 0;
-
-
-        for (let index = 0; index < actorData.items.length; index++) {
-            if (actorData.items[index].type != "spell") {
-                data.data.abilities.ADR.bonus += actorData.items[index].data.abilities.ADR;
-                data.data.abilities.CHA.bonus += actorData.items[index].data.abilities.CHA;
-                data.data.abilities.COU.bonus += actorData.items[index].data.abilities.COU;
-                data.data.abilities.FO.bonus += actorData.items[index].data.abilities.FO;
-                data.data.abilities.INT.bonus += actorData.items[index].data.abilities.INT;
-
-                if (actorData.items[index].type == "weapon") {
-                    data.data.abilities.AT.bonus += actorData.items[index].data.modAT;
-                    data.data.abilities.PRD.bonus += actorData.items[index].data.modPRD;
-                }
-
-                if (actorData.items[index].type == "armor") {
-                    data.data.abilities.PR.bonus += actorData.items[index].data.PR;
-                    data.data.abilities.PRMag.bonus += actorData.items[index].data.PRMag;
-                }
-            } else {
-                data.spells.list.push(actorData.items[index]);
+        console.log(data);
+        for (let index = 0; index < data.actor.items.length; index++) {
+            if (data.actor.items[index].type == "spell") {
+                data.spells.list.push(data.actor.items[index]);
             }
         }
-        console.log(actorData.items);
-
-
-        data.data.abilities.MP.total = parseInt(data.data.abilities.MP.base) + parseInt(data.data.abilities.MP.bonus) + parseInt(data.data.abilities.MP.mod);
-        data.data.abilities.AT.total = parseInt(data.data.abilities.AT.base) + parseInt(data.data.abilities.AT.bonus) + parseInt(data.data.abilities.AT.mod);
-        data.data.abilities.PRD.total = parseInt(data.data.abilities.PRD.base) + parseInt(data.data.abilities.PRD.bonus) + parseInt(data.data.abilities.PRD.mod);
-        data.data.abilities.COU.total = parseInt(data.data.abilities.COU.base) + parseInt(data.data.abilities.COU.bonus) + parseInt(data.data.abilities.COU.mod);
-        data.data.abilities.INT.total = parseInt(data.data.abilities.INT.base) + parseInt(data.data.abilities.INT.bonus) + parseInt(data.data.abilities.INT.mod);
-        data.data.abilities.CHA.total = parseInt(data.data.abilities.CHA.base) + parseInt(data.data.abilities.CHA.bonus) + parseInt(data.data.abilities.CHA.mod);
-        data.data.abilities.ADR.total = parseInt(data.data.abilities.ADR.base) + parseInt(data.data.abilities.ADR.bonus) + parseInt(data.data.abilities.ADR.mod);
-        data.data.abilities.FO.total = parseInt(data.data.abilities.FO.base) + parseInt(data.data.abilities.FO.bonus) + parseInt(data.data.abilities.FO.mod);
-
-        data.data.abilities.PR.total = parseInt(data.data.abilities.PR.base) + parseInt(data.data.abilities.PR.bonus) + parseInt(data.data.abilities.PR.mod);
-        data.data.abilities.PR.total = data.data.abilities.PR.total > parseInt(data.data.PRMax) ? parseInt(data.data.PRMax) : data.data.abilities.PR.total;
-
-        data.data.abilities.PRMag.total = parseInt(data.data.abilities.PRMag.base) + parseInt(data.data.abilities.PRMag.bonus) + parseInt(data.data.abilities.PRMag.mod);
-        data.data.abilities.HP.total = parseInt(data.data.abilities.HP.base) + parseInt(data.data.abilities.HP.bonus);
-        data.data.abilities.HPMAX.total = parseInt(data.data.abilities.HPMAX.base) + parseInt(data.data.abilities.HPMAX.bonus);
-        data.data.abilities.MP.total = parseInt(data.data.abilities.MP.base) + parseInt(data.data.abilities.MP.bonus);
-        data.data.abilities.MPMAX.total = parseInt(data.data.abilities.MPMAX.base) + parseInt(data.data.abilities.MPMAX.bonus);
-
-        data.data.abilities.MagPHY.base = Math.round((parseInt(data.data.abilities.ADR.total) + parseInt(data.data.abilities.INT.total)) / 2 + parseInt(data.data.abilities.MagPHY.bonus));
-        data.data.abilities.MagPHY.total = parseInt(data.data.abilities.MagPHY.base) + parseInt(data.data.abilities.MagPHY.mod);
-
-        data.data.abilities.MagPSY.base = Math.round((parseInt(data.data.abilities.CHA.total) + parseInt(data.data.abilities.INT.total)) / 2 + parseInt(data.data.abilities.MagPSY.bonus));
-        data.data.abilities.MagPSY.total = parseInt(data.data.abilities.MagPSY.base) + parseInt(data.data.abilities.MagPSY.mod);
-
-        data.data.abilities.ReMag.base = Math.round((parseInt(data.data.abilities.COU.total) + parseInt(data.data.abilities.INT.total) + parseInt(data.data.abilities.FO.total)) / 3 + parseInt(data.data.abilities.ReMag.bonus));
-        data.data.abilities.ReMag.total = parseInt(data.data.abilities.ReMag.base) + parseInt(data.data.abilities.ReMag.mod);
-
-
-
-        data.data.goldTotal = parseInt(data.data.gold) + (500 * parseInt(data.data.berylium)) + (100 * parseInt(data.data.thritil));
-        console.log(data);
-
+        console.log(data.spells);
         data.spells.list.sort(function(a, b) { return a.data.spellLevel - b.data.spellLevel });
 
         for (let index = 0; index < data.spells.list.length; index++) {
@@ -140,7 +80,6 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
 
         }
         console.log(data);
-
         return data;
     }
 
@@ -157,7 +96,6 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
-            console.log(li);
             const item = this.actor.items.get(li.data("itemId"));
             item.sheet.render(true);
         });
@@ -250,13 +188,11 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
 
         $("#buttonCharacterSheetCharacter").click(function() {
             showCharacterSheetCharacter();
-            console.log("test 1");
             CONFIG.naheulbeuk.settings.choice = 0;
         });
 
         $("#buttonCharacterSheetSpellBook").click(function() {
             showCharacterSheetSpellBook();
-            console.log("test 11");
             CONFIG.naheulbeuk.settings.choice = 1;
         });
 
@@ -281,6 +217,28 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
 
             $(this).attr('disabled', true);
             $(this).addClass("active");
+        });
+
+
+
+        $(".abilityValue, .abilityName").click(function() {
+
+            const words = $(this).parent().parent().find(".abilityValue span").attr('name').split('.');
+
+            let r = new Roll("1d20");
+            r.evaluate({ "async": false });
+            var classDice = parseInt($(this).parent().parent().find(".abilityValue span").text()) >= r.total ? "success" : "fail";
+            if (r.total == 1)
+                classDice = 'successCrit';
+            if (r.total == 20)
+                classDice = 'failCrit';
+
+            let chatData = {
+                user: game.user.id,
+                speaker: ChatMessage.getSpeaker(),
+                content: "Test de  " + CONFIG.naheulbeuk.ability[words[2]] + "(" + $(this).parent().parent().find(".abilityValue span").text() + ") <div class='diceChatRoll " + classDice + "'>" + r.total + "</div>"
+            };
+            r.toMessage(chatData);
         });
 
 

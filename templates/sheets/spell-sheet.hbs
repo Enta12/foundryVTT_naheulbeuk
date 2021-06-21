@@ -48,12 +48,25 @@
             <table>
                 <tr>
                     <td><span>Confrontation/Epreuve</span></td>
-                    <td> <input id="" name="data.test" type="text" value="{{data.test}}" data-dtype="String" /></td>
+                    <td>
+                        <select name="data.testWith">
+                            {{#select data.testWith}}
+                            {{#each config.ability as |name type|}}
+                            <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
+                            {{/select}}
+                        </select>
+                        <input id="diceTextInput" name="data.testMod" type="text" value="{{data.testMod}}"
+                            data-dtype="Number" />
+                    </td>
                 </tr>
                 <tr>
                     <td><span>Dégats</span></td>
-                    <td> <input id="" name="data.damage" type="text" value="{{data.damage}}" data-dtype="String" />
+                    <td> <input id="diceDamageInput" name="data.damage" type="text" value="{{data.damage}}"
+                            data-dtype="String" />
                     </td>
+                    <td><span>PI ?</span><input type="checkbox" name="data.checkPI" {{checked data.checkPI}}></td>
+                    <td><span>PS ?</span><input type="checkbox" name="data.checkPS" {{checked data.checkPS}}></td>
                 </tr>
             </table>
 

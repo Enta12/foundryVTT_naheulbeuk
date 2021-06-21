@@ -34,7 +34,18 @@ naheulbeuk.school = {
     slanoush: "naheulbeuk.school.slanoush",
     adathie: "naheulbeuk.school.adathie"
 };
-
+naheulbeuk.ability = {
+    AT: "AT",
+    PRD: "PRD",
+    COU: "COU",
+    INT: "INT",
+    ADR: "ADR",
+    CHA: "CHA",
+    FO: "FO",
+    MagPHY: "MagPHY",
+    MagPSY: "MagPSY",
+    ReMag: "ReMag"
+}
 naheulbeuk.settings = {
     choice: 0
 };

@@ -1,4 +1,5 @@
 import { naheulbeuk } from "./module/config.js"
+import { NaheulbeukActor } from "./module/documents/actor.mjs";
 import NaheulbeukItemSheet from "./module/sheets/NaheulbeukItemSheet.js";
 import NaheulbeukNamedCharacterSheet from "./module/sheets/NaheulbeukNamedCharacterSheet.js";
 
@@ -60,7 +61,12 @@ console.log("NAHEULBEUK | naheulbeuk.js load");
 Hooks.once('init', async function() {
     console.log("Donjon de naheulbeuk | Initialising naheulbeuk system");
 
+    game.naheulbeuk = {
+        NaheulbeukActor
+    };
     CONFIG.naheulbeuk = naheulbeuk;
+
+    CONFIG.Actor.documentClass = NaheulbeukActor;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("naheulbeuk", NaheulbeukItemSheet, { makeDefault: true });
