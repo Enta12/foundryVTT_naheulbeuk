@@ -2,6 +2,7 @@
     <header class="sheet-header">
         <img src="icons/svg/sword.svg" data-edit="img" title="icons/svg/sword.svg" height="64" width="64" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
+        <input id='diceWeapon' type="image" src="icons/svg/d20-black.svg" />
     </header>
     <span>Information visible</span><input type="checkbox" id="scales" name="data.secretPrincipalData" {{checked
         data.secretPrincipalData}}>
@@ -15,6 +16,8 @@
             <th>Dégats</th>
             <th>Critique</th>
             <th>Fumble</th>
+            <td>PI ?</td>
+            <td>PS ?</td>
         </tr>
         <tr>
             <td>
@@ -29,14 +32,15 @@
             <td><input name="data.modAT" type="text" value="{{data.modAT}}" data-dtype="Number" /></td>
             <td><input name="data.modPRD" type="text" value="{{data.modPRD}}" data-dtype="Number" /></td>
             <td><input name="data.RUP" type="text" value="{{data.RUP}}" data-dtype="String" /></td>
-            <td><input name="data.damage" type="text" value="{{data.damage}}" data-dtype="String" /></td>
+            <td><input id="diceDamageInput" name="data.damage" type="text" value="{{data.damage}}" data-dtype="String" /></td>
             <td><input name="data.crit" type="text" value="{{data.crit}}" data-dtype="Number" /></td>
             <td><input name="data.fumble" type="text" value="{{data.fumble}}" data-dtype="Number" /></td>
+            <td><input type="checkbox" name="data.checkPI" {{checked data.checkPI}}></td>
+            <td><input type="checkbox" name="data.checkPS" {{checked data.checkPS}}></td>
         </tr>
     </table>
     {{/if}}
-    <span>Information bonus visible</span><input type="checkbox" id="scales" name="data.secretBonusData" {{checked
-        data.secretBonusData}}>
+    <span>Information bonus visible</span><input type="checkbox" id="scales" name="data.secretBonusData" {{checked data.secretBonusData}}>
     {{#if data.secretBonusData}}
     <h2>Bonus: </h2>
 
@@ -48,6 +52,8 @@
             <th>CHA</th>
             <th>ADR</th>
             <th>FO</th>
+            <th>PI</th>
+            <th>PS</th>
 
         </tr>
         <tr>
@@ -57,6 +63,8 @@
             <td><input name="data.abilities.CHA" type="text" value="{{data.abilities.CHA}}" data-dtype="Number" /></td>
             <td><input name="data.abilities.ADR" type="text" value="{{data.abilities.ADR}}" data-dtype="Number" /></td>
             <td><input name="data.abilities.FO" type="text" value="{{data.abilities.FO}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.PI" type="text" value="{{data.abilities.PI}}" data-dtype="Number" /></td>
+            <td><input name="data.abilities.PS" type="text" value="{{data.abilities.PS}}" data-dtype="Number" /></td>
         </tr>
     </table>
     {{/if}}

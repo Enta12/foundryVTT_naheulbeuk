@@ -110,6 +110,16 @@
                         "bonus": 0,
                         "mod": 0,
                         "total": 0
+                    },
+                    "PI": {
+                        "base": 0,
+                        "bonus": 0,
+                        "total": 0
+                    },
+                    "PS": {
+                        "base": 0,
+                        "bonus": 0,
+                        "total": 0
                     }
                 }
             },
@@ -182,7 +192,9 @@
                 "INT": 0,
                 "CHA": 0,
                 "ADR": 0,
-                "FO": 0
+                "FO": 0,
+                "PI": 0,
+                "PS": 0
             }
 
         },
@@ -199,7 +211,9 @@
             "crit": 1,
             "fumble": 20,
             "secretPrincipalData": true,
-            "secretBonusData": true
+            "secretBonusData": true,
+            "checkPI": false,
+            "checkPS": false
 
         },
 
@@ -220,17 +234,20 @@
             "templates": [
                 "itemDescription"
             ],
+            "testWith": "",
             "damage": "",
             "spellLevel": 0,
             "school": "",
-            "test": "",
+            "testMod": "",
             "castSentence": "",
             "castTime": 0,
             "castAOE": 0,
             "cost": 0,
             "range": 0,
             "effect": "",
-            "note": ""
+            "note": "",
+            "checkPI": false,
+            "checkPS": false
 
 
         },

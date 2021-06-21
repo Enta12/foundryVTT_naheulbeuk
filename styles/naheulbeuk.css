@@ -173,25 +173,30 @@
 
 #characterEquipment {
     position: absolute;
-    right: 150px;
-    top: 200px;
+    right: 155px;
+    top: 163px;
 }
 
 #characterEquipment img {
-    width: 250px;
+    width: 220px;
     border: none;
 }
 
 #characterItems {
+    max-width: 180px;
     padding: 5px;
     top: 200px;
     right: 0px;
     position: absolute;
     display: inline-block;
+    /* border: solid; */
+    text-align: right;
 }
 
 #characterItems li {
     padding-bottom: 5px;
+    /* right: -75px; */
+    position: relative;
 }
 
 #characterItems h3 {
@@ -597,4 +602,88 @@ table#characterSkillsTable td img {
 #skillSheetForm img {
     border: dashed 2px #ff0000;
     background-color: #f58383;
+}
+
+div.diceChatRoll {
+    border: solid black 1px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    color: #131327;
+    background-color: #eee;
+    font-size: x-large;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+div.diceChatRoll.fail {
+    background-color: #ff6c6cac;
+    color: #4a0101;
+    border: solid 1px #b1b1b1;
+}
+
+div.diceChatRoll.success {
+    background-color: #7fff7f;
+    color: #063301;
+    border: solid 1px #b1b1b1;
+}
+
+div.diceChatRoll.successCrit {
+    background-color: gold;
+    color: black;
+    border: solid 1px #b1b1b1;
+}
+
+div.diceChatRoll.failCrit {
+    background-color: black;
+    color: white;
+}
+
+.dice-tooltip {
+    display: block!important;
+}
+
+#characterDamageBonus {
+    padding: 5px;
+    top: 625px;
+    left: 422px;
+    position: absolute;
+    display: inline-block;
+}
+
+#characterDamageBonus table {
+    border: 1px solid #797979;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    width: 110px;
+}
+
+#characterDamageBonus input {
+    border: none;
+    border-bottom: 1px solid rgb(189, 182, 153);
+    background-color: transparent;
+    width: 30px;
+    text-align: center;
+}
+
+ol.actor-items {
+    max-width: 2500px;
+    /* overflow: scroll; */
+}
+
+#diceWeapon {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.sheet header.sheet-header h1 input {
+    height: 48px;
+    line-height: 48px;
+    margin: 8px 2%;
+    width: 305px;
 }
