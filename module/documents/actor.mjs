@@ -24,7 +24,7 @@ export class NaheulbeukActor extends Actor {
 
         for (let index = 0; index < this.data.items.size; index++) {
 
-            if (this.data.items.contents[index].data.type != "spell" && this.data.items.contents[index].data.type != "skill") {
+            if (this.data.items.contents[index].data.type != "spell" && this.data.items.contents[index].data.type != "skill" && this.data.items.contents[index].data.type != "object") {
                 console.log(this.data.data.abilities);
                 console.log(this.data.items.contents[index].data.data.abilities);
 
