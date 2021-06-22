@@ -41,17 +41,15 @@ export default class NaheulbeukItemSheet extends ItemSheet {
 
     }
     _onDiceDamageClick() {
-        console.log(this.item.data);
         let impact = this.item.data.data.checkPI && this.item.actor.data.data.abilities.PI.total ? this.item.actor.data.data.abilities.PI.total : 0;
         let damageSpell = this.item.data.data.checkPS && this.item.actor.data.data.abilities.PI.total ? this.item.actor.data.data.abilities.PS.total : 0;
 
-        // console.log(impact);
-        // console.log(damageSpell);
         let str = $("#diceDamageInput").val();
         let r = new Roll(str + " + @PI + @PS", { PI: 0, PS: 0 });
         r.evaluate({ "async": false });
         r.toMessage();
     }
+
     _onDiceTestClick() {
 
         let valueStats = 0;
