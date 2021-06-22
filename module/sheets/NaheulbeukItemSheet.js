@@ -36,9 +36,6 @@ export default class NaheulbeukItemSheet extends ItemSheet {
         html.find('#diceTest').click(this._onDiceTestClick.bind(this));
         html.find('#diceDamage').click(this._onDiceDamageClick.bind(this));
         html.find('#diceWeapon').click(this._onDiceDamageClick.bind(this));
-
-
-
     }
     _onDiceDamageClick() {
         let impact = this.item.data.data.checkPI && this.item.actor.data.data.abilities.PI.total ? this.item.actor.data.data.abilities.PI.total : 0;

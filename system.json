@@ -59,6 +59,6 @@
     "primaryTokenAttribute": "resources.health",
     "secondaryTokenAttribute": "resources.mana",
     "url": "https://gitlab.com/aperezgo74/naheulbeuk",
-    "manifest": "https://gitlab.com/aperezgo74/naheulbeuk/-/blob/main/system.json",
+    "manifest": "https://gitlab.com/aperezgo74/naheulbeuk/-/raw/main/system.json",
     "download": "https://gitlab.com/aperezgo74/naheulbeuk/-/archive/main/naheulbeuk-main.zip"
 }
