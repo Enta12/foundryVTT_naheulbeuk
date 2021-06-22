@@ -687,3 +687,24 @@ ol.actor-items {
     margin: 8px 2%;
     width: 305px;
 }
+
+#characterItems img {
+    display: none;
+}
+
+table#characterObjectBagTable td {
+    max-width: 150px;
+    text-align: center;
+}
+
+table#characterObjectBagTable td img {
+    height: 50px;
+    width: 50px;
+    border: dashed 2px #277c00;
+    background-color: #97ff8e;
+}
+
+#objectSheetForm img {
+    border: dashed 2px #277c00;
+    background-color: #97ff8e;
+}

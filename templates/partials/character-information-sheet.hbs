@@ -122,18 +122,18 @@
             <th colspan="2">Energie vitale</th>
         </tr>
         <tr>
-            <td><input name="data.abilities.HP.total" value="{{data.abilities.HP.total}}" data-dtype="Number" />
+            <td><input name="data.abilities.HP.base" value="{{data.abilities.HP.base}}" data-dtype="Number" />
             </td>
-            <td><input name="data.abilities.HPMAX.total" value="{{data.abilities.HPMAX.total}}" data-dtype="Number" />
+            <td><input name="data.abilities.HPMAX.base" value="{{data.abilities.HPMAX.base}}" data-dtype="Number" />
             </td>
         </tr>
         <tr>
             <th colspan="2">Energie astrale</th>
         </tr>
         <tr>
-            <td><input name="data.abilities.MP.total" value="{{data.abilities.MP.total}}" data-dtype="Number" />
+            <td><input name="data.abilities.MP.base" value="{{data.abilities.MP.base}}" data-dtype="Number" />
             </td>
-            <td><input name="data.abilities.MPMAX.total" value="{{data.abilities.MPMAX.total}}" data-dtype="Number" />
+            <td><input name="data.abilities.MPMAX.base" value="{{data.abilities.MPMAX.base}}" data-dtype="Number" />
             </td>
         </tr>
     </table>
@@ -314,6 +314,7 @@
         {{#each actor.items as |item id|}}
         {{#ifCond item.type '!=' "spell" }}
         {{#ifCond item.type '!=' "skill" }}
+        {{#ifCond item.type '!=' "object" }}
         <div class="item" data-item-id="{{item._id}}">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
             <h4 class="item-name">{{item.name}}</h4>
@@ -322,6 +323,7 @@
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
 
         </div>
+        {{/ifCond}}
         {{/ifCond}}
         {{/ifCond}}
         {{/each}}
