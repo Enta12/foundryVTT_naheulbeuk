@@ -17,12 +17,16 @@ export class NaheulbeukActor extends Actor {
         this.data.data.abilities.PRMag.bonus = 0;
         this.data.data.abilities.PI.bonus = 0;
         this.data.data.abilities.PS.bonus = 0;
+        this.data.data.abilities.PI.total = 0;
+        this.data.data.abilities.PS.total = 0;
         console.warn(this);
         console.log(this);
 
         for (let index = 0; index < this.data.items.size; index++) {
 
-            if (this.data.items.contents[index].data.type != "spell") {
+            if (this.data.items.contents[index].data.type != "spell" && this.data.items.contents[index].data.type != "skill") {
+                console.log(this.data.data.abilities);
+                console.log(this.data.items.contents[index].data.data.abilities);
 
                 this.data.data.abilities.ADR.bonus += this.data.items.contents[index].data.data.abilities.ADR;
                 this.data.data.abilities.CHA.bonus += this.data.items.contents[index].data.data.abilities.CHA;
@@ -43,6 +47,7 @@ export class NaheulbeukActor extends Actor {
                 }
             }
         }
+        console.warn(this.data.data.abilities);
 
         this.data.data.abilities.MP.total = parseInt(this.data.data.abilities.MP.base) + parseInt(this.data.data.abilities.MP.bonus) + parseInt(this.data.data.abilities.MP.mod);
         this.data.data.abilities.AT.total = parseInt(this.data.data.abilities.AT.base) + parseInt(this.data.data.abilities.AT.bonus) + parseInt(this.data.data.abilities.AT.mod);

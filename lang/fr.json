@@ -2,10 +2,12 @@
     "ITEM.TypeWeapon": "Arme",
     "ITEM.TypeArmor": "Armure",
     "ITEM.TypeSpell": "Sort",
+    "ITEM.TypeObject": "Objet",
     "ACTOR.TypeHeros": "Héros",
     "ACTOR.TypeMonster": "Monstre",
     "ACTOR.TypeNpc": "PNJ",
     "ACTOR.TypeBoss": "Boss",
+
 
     "naheulbeuk": {
         "attack": {

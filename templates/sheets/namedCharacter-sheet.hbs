@@ -1,30 +1,34 @@
 <form id="characterSheet" class="{{cssClass}}" autocomplete="off">
-    <div id="buttonsCharacterSheet">
-        <button disabled class="active" id="buttonCharacterSheetCharacter"><i class="fas fa-user"></i> Personnage</button>
-        <button id="buttonCharacterSheetSpellBook"><i class="fas fa-journal-whills"></i> Grimoire</button>
-        <button id="buttonCharacterSheetSkills"><i class="fas fa-journal-whills"></i> Compétences</button>
-        <button id="buttonCharacterSheetBags"><i class="fas fa-box"></i> Sac</button>
-        <button id="buttonCharacterSheetSettings"><i class="fas fa-cogs"></i></button>
-    </div>
-    <div id="characterInformationSheet">
+    <nav class="sheet-tabs tabs" data-group="primary-tabs">
+    {{!-- <div id="buttonsCharacterSheet"> --}}
+        <a class="itemNav" data-tab="character"><i class="fas fa-user"></i> Personnage</a>
+        <a class="itemNav" data-tab="spellBook"><i class="fas fa-journal-whills"></i> Grimoire</a>
+        <a class="itemNav" data-tab="skillBook"><i class="fas fa-journal-whills"></i> Compétences</a>
+        <a class="itemNav" data-tab="bags"><i class="fas fa-box"></i> Sac</a>
+        <a class="itemNav" data-tab="settings"><i class="fas fa-cogs"></i></a>
+    </nav>
+
+<section class="sheet-body">
+    <div class="tab" data-tab="character" data-group="primary-tabs">
         {{> "systems/naheulbeuk/templates/partials/character-information-sheet.hbs"}}
     </div>
    
-    <div id="spellBookSheet">
+    <div class="tab" data-tab="spellBook" data-group="primary-tabs">
         {{> "systems/naheulbeuk/templates/partials/character-spell-book.hbs"}}
     </div>
-    <div id="characterSettingsSheet">
-        {{> "systems/naheulbeuk/templates/partials/character-settings-sheet.hbs"}}
+    <div class="tab" data-tab="skillBook" data-group="primary-tabs">
+        {{> "systems/naheulbeuk/templates/partials/character-skills-sheet.hbs"}}
 
     </div>
-    <div id="characterBagsSheet">
+    <div class="tab" data-tab="bags" data-group="primary-tabs">
         {{> "systems/naheulbeuk/templates/partials/character-bags-sheet.hbs"}}
 
     </div>
     
-    <div id="characterSkillsSheet">
-        {{> "systems/naheulbeuk/templates/partials/character-skills-sheet.hbs"}}
+    <div class="tab" data-tab="settings" data-group="primary-tabs">
+        {{> "systems/naheulbeuk/templates/partials/character-settings-sheet.hbs"}}
 
     </div>
+    </section>
 </form>
 

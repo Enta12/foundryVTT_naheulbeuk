@@ -1,6 +1,22 @@
-<h1><i class="fas fa-box"></i> Sacs</h1>
+<h1><i class="fas fa-journal-whills"></i> Sacs</h1>
 
+<table id="characterObjectBagTable">
+    <tr>
+        <th></th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Quantité</th>
+        <th></th>
+        <th></th>
+    </tr>
 
+    {{#each actor.items as |item id|}}
+    {{#ifCond item.type '==' "object" }}
+    {{>"systems/naheulbeuk/templates/cards/object-bag-card.hbs" item=item}}
+    {{/ifCond}}
+    {{/each}}
+
+    
 
  
 </table>

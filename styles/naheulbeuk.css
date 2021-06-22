@@ -26,7 +26,7 @@
 
 #characterResume {
     width: auto !important;
-    padding-top: 5px;
+    padding-top: 36px;
     /* padding-right: 5px; */
     right: 105px;
     position: absolute;
@@ -56,7 +56,7 @@
 
 #characterAbilities {
     padding: 5px;
-    top: 185px;
+    top: 220px;
     left: 0px;
     position: absolute;
     display: inline-block;
@@ -494,20 +494,7 @@ textarea {
     padding: 3px;
 }
 
-#spellBookSheet {
-    display: none;
-}
-
-#characterSkillsSheet {
-    display: none;
-}
-
-#characterBagsSheet {
-    display: none;
-}
-
 #characterSettingsSheet {
-    display: none;
     overflow-y: scroll !important;
 }
 
@@ -686,4 +673,41 @@ ol.actor-items {
     line-height: 48px;
     margin: 8px 2%;
     width: 305px;
+}
+
+#characterItems img {
+    display: none;
+}
+
+table#characterObjectBagTable td {
+    max-width: 150px;
+    text-align: center;
+}
+
+table#characterObjectBagTable td img {
+    height: 50px;
+    width: 50px;
+    border: dashed 2px #277c00;
+    background-color: #97ff8e;
+}
+
+#objectSheetForm img {
+    border: dashed 2px #277c00;
+    background-color: #97ff8e;
+}
+
+.itemNav {
+    text-align: center;
+}
+
+table#spellBookSheet td {
+    max-width: 150px;
+    text-align: center;
+}
+
+table#spellBookSheet td img {
+    height: 50px;
+    width: 50px;
+    border: dashed 2px #ff9711;
+    background-color: #ffbc65;
 }

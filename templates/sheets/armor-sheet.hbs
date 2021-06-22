@@ -1,6 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img src="icons/svg/shield.svg" data-edit="img" title="icons/svg/shield.svg" height="64" width="64" />
+        <img src="{{item.img}}" data-edit="img" title="{{item.img}}" height="64" width="64" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
     </header>
     <span>Information visible</span><input type="checkbox" id="scales" name="data.secretPrincipalData" {{checked
@@ -8,9 +8,11 @@
     {{#if data.secretPrincipalData}}
     <table>
         <tr>
-            <th>Types de dégats</th>
+            <th>Types de pièces</th>
             <th>PR</th>
             <th>PR.Mag</th>
+            <th>RUP</th>
+
         </tr>
         <tr>
             <td>
@@ -24,6 +26,8 @@
             </td>
             <td><input name="data.PR" type="text" value="{{data.PR}}" data-dtype="Number" /></td>
             <td><input name="data.PRMag" type="text" value="{{data.PRMag}}" data-dtype="Number" /></td>
+            <td><input name="data.RUP" type="text" value="{{data.RUP}}" data-dtype="String" /></td>
+
         </tr>
     </table>
     {{/if}}
