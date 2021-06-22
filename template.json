@@ -155,7 +155,8 @@
                 "wealth"
             ],
             "PRMax": 0,
-            "actorDescription": ""
+            "actorDescription": "",
+            "actorSpecialThings": ""
         },
         "npc": {
             "templates": [
