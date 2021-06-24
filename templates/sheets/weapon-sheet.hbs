@@ -2,8 +2,24 @@
     <header class="sheet-header">
         <img src="{{item.img}}" data-edit="img" title="{{item.img}}" height="64" width="64" />
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}" /></h1>
-        <input id='diceWeapon' type="image" src="icons/svg/d20-black.svg" />
     </header>
+    <table id="dicesWeapon">
+        <tr>
+            <th>Attaque</th>
+            {{#ifCond data.attackWith '!=' "range" }}
+            <th>Parade</th>
+            {{/ifCond}}
+            <th>Dégats</th>
+        </tr>
+        <tr>
+            <td><input id='diceAttackWeapon' type="image" src="icons/svg/d20-black.svg" /></td>
+            {{#ifCond data.attackWith '!=' "range" }}
+            <td><input id='diceParadeWeapon' type="image" src="icons/svg/d20-black.svg" /></td>
+            {{/ifCond}}
+            <td><input id='diceDamageWeapon' type="image" src="icons/svg/d20-black.svg" /></td>
+        </tr>
+    </table>
+        <hr>
     <span>Information visible</span><input type="checkbox" id="scales" name="data.secretPrincipalData" {{checked
         data.secretPrincipalData}}>
     {{#if data.secretPrincipalData}}

@@ -1,7 +1,20 @@
 <h1><i class="fas fa-cogs"></i> Paramètres du personnage</h1>
 <h2>Résumé</h2>
-<textarea>{{data.actorDescription}}</textarea>
+<textarea name="data.actorDescription">{{data.actorDescription}}</textarea>
 
 <h2>Traits particuliers</h2>
-<textarea>{{data.actorSpecialThings}}</textarea>
+<textarea name="data.actorSpecialThings">{{data.actorSpecialThings}}</textarea>
 
+<h2>Image de fond</h2>
+<select name="data.bg_image">
+    {{#select data.bg_image}}
+
+    <option value="Ranger_Art.png">Ranger</option>
+    <option value="Barbare_Art.png">Barbare</option>
+    <option value="Elfe_Art.png">Elfe</option>
+    <option value="Magicienne_Art.png">Magicienne</option>
+    <option value="Nain_Art.png">Nain</option>
+    <option value="Ogre_Art.png">Ogre</option>
+
+    {{/select}}
+</select>
