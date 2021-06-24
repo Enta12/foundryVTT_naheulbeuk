@@ -2,8 +2,8 @@
     "name": "naheulbeuk",
     "title": "Le donjon de naheulbeuk",
     "description": "JDR naheulbeuk by Sarkande",
-    "version": "1.0.1",
-    "templateVersion": 3,
+    "version": "1.1.0",
+    "templateVersion": 26,
     "author": "Sarkande",
 
     "esmodules": [
