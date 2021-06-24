@@ -173,12 +173,12 @@
 
 #characterEquipment {
     position: absolute;
-    right: 155px;
-    top: 163px;
+    right: 140px;
+    top: 215px;
 }
 
 #characterEquipment img {
-    width: 220px;
+    width: 250px;
     border: none;
 }
 
@@ -431,7 +431,7 @@ textarea {
 }
 
 .sheet {
-    min-height: 350px !important;
+    min-height: 360px !important;
     min-width: 550px !important;
 }
 
@@ -663,8 +663,8 @@ ol.actor-items {
 }
 
 #diceWeapon {
-    width: 64px;
-    height: 64px;
+    width: 16px;
+    height: 24px;
     display: block;
 }
 
@@ -672,7 +672,7 @@ ol.actor-items {
     height: 48px;
     line-height: 48px;
     margin: 8px 2%;
-    width: 305px;
+    width: 98%;
 }
 
 #characterItems img {
@@ -710,4 +710,33 @@ table#spellBookSheet td img {
     width: 50px;
     border: dashed 2px #ff9711;
     background-color: #ffbc65;
+}
+
+#dicesWeapon th {
+    width: auto;
+    display: inline-blockblock;
+}
+
+#dicesWeapon td input {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+#diceAttackWeapon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+#diceParadeWeapon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+#diceDamageWeapon {
+    width: 32px;
+    height: 32px;
+    display: block;
 }

@@ -156,7 +156,8 @@
             ],
             "PRMax": 0,
             "actorDescription": "",
-            "actorSpecialThings": ""
+            "actorSpecialThings": "",
+            "bg_image": "Ranger_Art.png"
         },
         "npc": {
             "templates": [
@@ -228,6 +229,8 @@
             "protectionItem": "",
             "PR": 0,
             "PRMag": 0,
+            "modAT": 0,
+            "modPRD": 0,
             "secretPrincipalData": true,
             "secretBonusData": true,
             "RUP": "1-3"
