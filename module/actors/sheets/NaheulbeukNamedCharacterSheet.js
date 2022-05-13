@@ -70,42 +70,36 @@ export default class NaheulbeukNamedCharacterSheet extends ActorSheet {
             li.slideUp(200, () => this.render(false));
         });
 
-        //html.find('#diceTest').click(this._onDiceTestClick.bind(this));
-
-        $(".abilityValue, .abilityName").click(function() {
-            console.log(this);
-            const words = $(this).parent().parent().find(".abilityValue span").attr('name').split('.');
-
-            let r = new Roll("1d20");
-            r.evaluate({ "async": false });
-            var classDice = parseInt($(this).parent().parent().find(".abilityValue span").text()) >= r.total ? "success" : "fail";
-            classDice = r.total == 1 ? 'successCrit' : r.total == 20 ? 'failCrit' : classDice;
-
+        $(".damage").click(function() {
+            const value = $(".attr.PI").val();
+            console.log("value", value)
+            let roll = new Roll('1d6+6');
+            roll.evaluate({ "async": false });
+            const PI = roll._total
 
             let chatData = {
                 user: game.user.id,
                 speaker: ChatMessage.getSpeaker(),
-                content: "Test de  " + CONFIG.naheulbeuk.ability[words[2]] + "(" + $(this).parent().parent().find(".abilityValue span").text() + ") <div class='diceChatRoll " + classDice + "'>" + r.total + "</div>"
+                content: "<h1>Dégats de ARME</h1> <div class='diceChatRoll'>" + PI + "</div>"
             };
-            r.toMessage(chatData);
+            roll.toMessage(chatData);
+        });
+
+        $(".abilityName").click(function() {
+            const ability = $(this).attr("name");
+            const value = $(`.attr.${ability}`).val();
+            let roll = new Roll("1d20");
+            roll.evaluate({ "async": false });
+            const rollValue = roll._total
+            var classDice = value >= rollValue ? "success" : "fail";
+            classDice = rollValue === 1 ? 'successCrit' : rollValue === 20 ? 'failCrit' : classDice;
+
+            let chatData = {
+                user: game.user.id,
+                speaker: ChatMessage.getSpeaker(),
+                content: "<h1>Test de  " + ability + " sur " + value + "</h1> <div class='diceChatRoll " + classDice + "'>" + rollValue + "</div>"
+            };
+            roll.toMessage(chatData);
         });
     }
-
-    // _onAbilityClick() {
-    //     console.log(this);
-    //     const words = $(this).parent().parent().find(".abilityValue span").attr('name').split('.');
-
-    //     let r = new Roll("1d20");
-    //     r.evaluate({ "async": false });
-    //     var classDice = parseInt($(this).parent().parent().find(".abilityValue span").text()) >= r.total ? "success" : "fail";
-    //     classDice = r.total == 1 ? 'successCrit' : r.total == 20 ? 'failCrit' : classDice;
-
-
-    //     let chatData = {
-    //         user: game.user.id,
-    //         speaker: ChatMessage.getSpeaker(),
-    //         content: "Test de  " + CONFIG.naheulbeuk.ability[words[2]] + "(" + $(this).parent().parent().find(".abilityValue span").text() + ") <div class='diceChatRoll " + classDice + "'>" + r.total + "</div>"
-    //     };
-    //     r.toMessage(chatData);
-    // }
 }

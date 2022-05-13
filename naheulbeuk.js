@@ -1,11 +1,13 @@
 import { naheulbeuk } from "./module/config.js"
-import { NaheulbeukActor } from "./module/documents/actor.mjs";
-import NaheulbeukItemSheet from "./module/sheets/NaheulbeukItemSheet.js";
-import NaheulbeukNamedCharacterSheet from "./module/sheets/NaheulbeukNamedCharacterSheet.js";
+import NaheulbeukActor from "./module/actors/entity.js";
+import NaheulbeukItemSheet from "./module/actors/sheets/NaheulbeukItemSheet.js";
+import NaheulbeukNamedCharacterSheet from "./module/actors/sheets/NaheulbeukNamedCharacterSheet.js";
+import NaheulbeukNamedNPCSheet from "./module/actors/sheets/NaheulbeukNamedNPCSheet.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/naheulbeuk/templates/partials/character-information-sheet.hbs",
+        "systems/naheulbeuk/templates/partials/npc-information-sheet.hbs",
         "systems/naheulbeuk/templates/partials/character-spell-book.hbs",
         "systems/naheulbeuk/templates/partials/character-settings-sheet.hbs",
         "systems/naheulbeuk/templates/partials/character-skills-sheet.hbs",
@@ -65,15 +67,33 @@ Hooks.once('init', async function() {
     };
     CONFIG.naheulbeuk = naheulbeuk;
 
+    
     CONFIG.Actor.documentClass = NaheulbeukActor;
 
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("naheulbeuk", NaheulbeukItemSheet, { makeDefault: true });
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("naheulbeuk", NaheulbeukNamedCharacterSheet, { makeDefault: true });
+    Actors.registerSheet("naheulbeuk", NaheulbeukNamedNPCSheet, {
+        types: [
+            "npc"
+        ],
+        makeDefault: true,
+        label: "naheulbeuk.SheetClassNPC"
+      });
+    
+    Actors.registerSheet("naheulbeuk", NaheulbeukNamedCharacterSheet, {
+        types: [
+            "heros",
+            "wizard",
+            "monster",
+            "boss"
+        ],
+        makeDefault: false,
+        label: "naheulbeuk.SheetClassCharacters"
+    });
 
     preloadHandlebarsTemplates();
 
-
+    
 });

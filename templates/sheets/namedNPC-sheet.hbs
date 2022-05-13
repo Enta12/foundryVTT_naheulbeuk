@@ -1,0 +1,13 @@
+<form id="characterSheet" class="{{cssClass}}" autocomplete="off">
+    <nav class="sheet-tabs tabs" data-group="primary-tabs">
+    {{!-- <div id="buttonsCharacterSheet"> --}}
+        <a class="itemNav" data-tab="informations"><i class="fas fa-user"></i> Global informations</a>
+    </nav>
+
+    <section class="sheet-body">
+        <div class="tab" data-tab="informations" data-group="primary-tabs">
+            {{> "systems/naheulbeuk/templates/partials/npc-information-sheet.hbs"}}
+        </div>
+    </section>
+</form>
+

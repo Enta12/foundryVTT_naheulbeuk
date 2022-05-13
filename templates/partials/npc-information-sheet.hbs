@@ -1,0 +1,49 @@
+<div id="characterInformations">
+    <div id="characterAvatar">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        <td><input class="caption" value="{{actor.name}}" />
+    </div>
+    <table>
+        <thead>
+            <tr class="tableTitle">
+                <th colspan="8">NAME</th>
+            </tr>
+            <tr>
+                <th><a class="abilityName" name ="AT">AT</a></th>
+                <th><a class="abilityName" name ="PRD">ESQ/PRD</a></th>
+                <th>ARME</th>
+                <th> <a class="damage" name="degats">Dégats</th>
+                <th> PR</th>
+                <th> <a class="abilityName" name="COU">COU<a></th>
+                <th> <a class="abilityName" name = "RM">RM<a></th>
+                <th> EV</td>            
+                <th> XP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input class="attr AT" type="number" value="{{data.AT}}" /></td>
+                <td><input class="attr PRD" type="number" value="{{data.PRD}}" /></td>
+                <td><input class="attr WEAPON" type="string" value="{{data.WEAPON}}" /></td>
+                <td><input class="attr PI" type="string" value="{{data.PI}}" /></td>
+                <td><input class="attr" type="number" value="{{data.PR}}" /></td>
+                <td><input class="attr COU" type="number" value="{{data.COU}}" /></td>
+                <td><input class="attr RM" type="number" value="{{data.RM}}" /></td>
+                <td><input class="attr" type="number" value="{{data.EV}}" /></td>
+                <td><input class="attr" type="number" value="{{data.XP}}" /></td>
+                
+            </tr>
+            <tr>
+                <td><a class="abilityName"><span>Intelligence: </span></a></td>
+                <td><a class="abilityValue"><span name="data.abilities.INT.total">{{data.abilities.INT.total}}</span></td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Commentaires
+    </p>
+    <div>
+        <!-- trait particulierement dangereux -->
+    </div>
+</div>
